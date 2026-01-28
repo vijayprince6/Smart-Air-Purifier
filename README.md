@@ -1,82 +1,101 @@
 # Smart Air Purifier with AQI Index Monitoring
 
 ## Overview
-This project is a Smart Air Purifier system that continuously monitors indoor air quality using an MQ135 gas sensor and automatically controls an air purifier (fan) based on the Air Quality Index (AQI). The system is powered by an ESP32 microcontroller and displays real-time AQI and purifier status on a 16x2 LCD screen.
+This project is a **Smart Air Purifier with AQI Index Monitoring** developed by our team to improve indoor air quality using automation.  
+The system continuously monitors air pollution using an **MQ135 gas sensor**, calculates the **Air Quality Index (AQI)**, and automatically controls an air purifier (fan) using a **relay module**.  
+An **ESP32 microcontroller** acts as the core controller, and real-time AQI values are displayed on a **16x2 LCD display**.
+
+All project materials including **source code, block diagram, project report, and real project photos** are available in this repository.
+
+---
+
+## Team Project
+This project was completed as a **team effort**, including:
+- System design  
+- Hardware implementation  
+- Coding and testing  
+- Documentation and reporting  
 
 ---
 
 ## Features
-- Real-time air quality monitoring using MQ135 sensor  
-- Automatic control of air purifier/fan via relay based on AQI thresholds  
-- AQI display on 16x2 I2C LCD for easy user interface  
-- ESP32 microcontroller with Wi-Fi and Bluetooth capabilities for future IoT integration  
-- Energy-efficient operation by activating purifier only when needed  
+- Real-time indoor air quality monitoring  
+- AQI calculation using MQ135 gas sensor  
+- Automatic purifier/fan control based on AQI threshold  
+- LCD display showing AQI and purifier status  
+- Energy-efficient operation  
+- Modular and scalable design  
 
 ---
 
-## Components Required
+## Components Used
 - ESP32 Development Board  
 - MQ135 Gas Sensor  
-- 16x2 LCD Display with I2C module  
+- 16x2 LCD Display (I2C)  
 - Relay Module  
-- Air Purifier or Fan (controlled by relay)  
+- Air Purifier / Fan  
 - Power Supply and connecting wires  
 
 ---
 
-## Circuit Diagram / Block Diagram
-![Block Diagram](SmartAirPurifier_BlockDiagram.png)  
-*The block diagram illustrates the connection between ESP32, MQ135 sensor, relay module, air purifier/fan, and LCD.*
+## Repository Contents
+| File Name | Description |
+|---------|-------------|
+| `SmartAirPurifier_AQI.ino` | ESP32 Arduino source code |
+| `SmartAirPurifier_BlockDiagram.png` | System block diagram |
+| `SmartAirPurifier_Report.pdf` | Complete project report |
+| `1.jpeg` – `4.jpeg` | Real project photos |
+| `README.md` | Project documentation |
+| `LICENSE` | MIT License |
 
 ---
 
-## How to Use
+## Block Diagram
+The block diagram explains how the ESP32 interfaces with the MQ135 sensor, relay module, LCD display, and air purifier.
 
-1. Connect all components as shown in the block diagram.  
-2. Upload the Arduino sketch `SmartAirPurifier_AQI.ino` to the ESP32 board using Arduino IDE.  
-3. Power on the system; the LCD will display the current AQI value and purifier status.  
-4. When air quality deteriorates beyond the defined threshold (AQI > 150), the relay activates the purifier automatically.  
-5. Monitor the serial console for debugging or AQI readings.
+---
+
+## How It Works
+1. MQ135 sensor detects harmful gases and air pollutants.  
+2. ESP32 reads sensor values and calculates AQI.  
+3. AQI is displayed on the LCD.  
+4. If AQI exceeds the threshold, the relay turns ON the purifier.  
+5. When air quality improves, the purifier turns OFF automatically.
 
 ---
 
 ## Installation & Setup
+1. Install **Arduino IDE**.  
+2. Add **ESP32 board support** in Board Manager.  
+3. Install `LiquidCrystal_I2C` library.  
+4. Connect hardware as per block diagram.  
+5. Upload `SmartAirPurifier_AQI.ino` to ESP32.  
+6. Power the system and monitor AQI on LCD.
 
-1. Download and install the [Arduino IDE](https://www.arduino.cc/en/software).  
-2. Install the ESP32 board package via Arduino Board Manager.  
-3. Install the `LiquidCrystal_I2C` library via Arduino Library Manager.  
-4. Connect your ESP32 and upload the provided code `SmartAirPurifier_AQI.ino`.  
-5. Connect the hardware components as per the circuit/block diagram.
+---
+
+## Results
+- The system successfully monitors air quality in real time.  
+- Automatic purifier control improves indoor air quality.  
+- Energy consumption is optimized through smart automation.
 
 ---
 
 ## Future Enhancements
-
-- IoT integration for remote monitoring and control via mobile app or web dashboard  
-- Cloud data logging and visualization  
-- Integration of particulate matter sensors (PM2.5, PM10) for comprehensive air quality analysis  
-- AI-based pollution prediction and smart alerts  
+- IoT-based remote monitoring  
+- Cloud data logging  
+- Mobile application support  
+- PM2.5 and PM10 sensor integration  
+- AI-based pollution prediction  
 
 ---
 
 ## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## References
-
-- Kumar, R., Singh, P., and Sharma, A. (2020) ‘Smart Air Purifier with Air Quality Monitoring System’, International Journal of Engineering Research & Technology.  
-- Sharma, R., and Singh, S. (2021) ‘Development of an IoT Based Air Pollution Monitoring and Purifier System’, International Journal of Advanced Research in Computer and Communication Engineering.  
-- Chen, L., Zhang, X., and Liu, Y. (2019) ‘Design of an Intelligent Air Purifier Based on PM2.5 and AQI Monitoring’, IEEE Access.  
+This project is licensed under the **MIT License**.
 
 ---
 
 ## Author
-
-Vijay Prince  
-*Contact info or links (optional)*
-
----
+**Vijay Prince**  
+*(Team Project)*
 
